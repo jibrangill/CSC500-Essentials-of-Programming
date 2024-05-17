@@ -5,20 +5,21 @@ FUNCTION multiplyDivide():
     OUTPUT This is a Program to multiple and divide two numbers enterd by user
     INPUT first_number
     INPUT second_number
-    FLOAT first_number
-    FLOAT second_number
-    SET MULTIPLY = first_number + second_number
+    CONVERT first_number to FLOAT
+    CONVERT second_number to FLOAT
+    SET MULTIPLICATION = first_number + second_number
     TRY:
        SET DIVISION = first_number + second_number
     CATCH DivisionByZero:
        SET DIVISION = "Division by Zero Error"
-       OUTPUT ERROR 
-    RETURN MULTIPLY, DIVISION
+       OUTPUT "ERROR: Division by Zero" 
+    RETURN MULTIPLICATION, DIVISION, first_number, second_number
 
 #Calling the fucntion addsubtract()
-result_multiplication, result_division = CALL multiplyDivide()
+result_multiplication, result_division, first_number, second_number = CALL multiplyDivide()
 
 #Print the results resturned by Function
-OUTPUT result_multiplication
-OUTPUT result_division
+OUTPUT "Multiplication of ",first_number," and ",second_number," is ",result_multiplication
+CONVERT result_division to two decimal places
+OUTPUT "Division of ",first_number," and ",second_number," is ",result_division
 END

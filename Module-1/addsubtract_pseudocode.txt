@@ -1,20 +1,20 @@
 #This is a simple program to perform addition and subtraction on two numbers entered by the user
 
-#Function-1 to perform get input from user and perform the computation i.e. addition and subtraction
+#Function to get input from user and perform the computation i.e. addition and subtraction
 FUNCTION addSubtract():
     OUTPUT This is a Program to add and subtract two numbers enterd by user
     INPUT first_number
-    I NPUT second_number
-    FLOAT first_number
-    FLOAT second_number
+    INPUT second_number
+    CONVERT first_number to FLOAT
+    CONVERT second_number to FLOAT
     SET SUM = first_number + second_number
-    SET SUBTRACTION = first_number + second_number
-    RETURN SUM, SUBTRACTION
+    SET DIFFERENCE = first_number - second_number
+    RETURN SUM, DIFFERENCE, first_number, second_number
 
 #Calling the fucntion addsubtract()
-result_sum, result_subtraction = CALL addSubtract()
+result_sum, result_difference, first_number, second_number = CALL addSubtract()
 
 #Print the results resturned by Function
-OUTPUT result_sum
-OUTPUT result_subtraction
-
+OUTPUT "Sum of ",first_number," and ",second_number," is ", result_sum
+OUTPUT "Difference of ",first_number," and ",second_number," is ", result_difference
+END

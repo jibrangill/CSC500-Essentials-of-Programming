@@ -9,14 +9,15 @@ def addSubtract():
     num2 = input('Enter the second number: ')
     num1_f, num2_f = float(num1), float(num2)
     sum = num1_f + num2_f
-    subt = num1_f - num2_f
-    return sum, subt
+    difference = num1_f - num2_f
+    return sum, difference, num1_f, num2_f
 
 #Performing a function call
-result_add, result_subtract = addSubtract()
+result_add, result_subtract, num1, num2 = addSubtract()
 
 #Printint the Result
 print('----------------------------')
-print('RESULTS: ')
-print('Sum = ',result_add)
-print('Subtraction = ',result_subtract)
+print('RESULT: ')
+print('i) Sum of ',num1,' and ',num2,' is ',result_add)
+print('ii) Difference of ',num1,' and ',num2,' is ',result_subtract)
+print()

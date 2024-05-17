@@ -13,14 +13,17 @@ def mulDiv():
         division = num1_f/num2_f
     except ZeroDivisionError:
         division = "#DIV/0! error"
-        print('[ERROR] Divison by zero exception occured')
-    return multiplication, division
+    return multiplication, division, num1_f, num2_f
 
 ##Calling the fucntion
-checkMultiplication, checkDivision = mulDiv()
+resultMultiplication, resultDivision, num1, num2 = mulDiv()
 
 #Printing the Result
 print('----------------------------')
-print('RESULTS: ')
-print('Multiplication = ',checkMultiplication)
-print('Division = ',checkDivision)
+print('RESULT: ')
+print('[Multiplication]: ', num1,'x',num2,' = ',resultMultiplication)
+if num2 == 0:
+    print('[DIVISION]: ERROR. Input Denominator is ', int(num2),'.', end=' ')
+    print('Divison By Zero Exception.')
+else:
+    print('[Division]:       ',num1,'/',num2,' = ',round(resultDivision,2))
