@@ -19,6 +19,7 @@ FUNCTION multiplyDivide():
 result_multiplication, result_division, first_number, second_number = CALL multiplyDivide()
 
 #Print the results resturned by Function
+CONVERT result_multiplication to two decimal places
 OUTPUT "Multiplication of ",first_number," and ",second_number," is ",result_multiplication
 CONVERT result_division to two decimal places
 OUTPUT "Division of ",first_number," and ",second_number," is ",result_division
