@@ -1,24 +1,25 @@
 #This is a simple program to perform multiplication and division on two numbers entered by the user
 
 #Function to get input from user and perform the computation i.e. multiplication and division
+
 FUNCTION multiplyDivide():
     OUTPUT This is a Program to multiple and divide two numbers enterd by user
     INPUT first_number
     INPUT second_number
     CONVERT first_number to FLOAT
     CONVERT second_number to FLOAT
-    SET MULTIPLICATION = first_number + second_number
+    SET MULTIPLICATION = first_number * second_number
     TRY:
-       SET DIVISION = first_number + second_number
+       SET DIVISION = first_number / second_number
     CATCH DivisionByZero:
        SET DIVISION = "Division by Zero Error"
        OUTPUT "ERROR: Division by Zero" 
     RETURN MULTIPLICATION, DIVISION, first_number, second_number
 
-#Calling the fucntion addsubtract()
+#Calling the function multiplyDivide()
 result_multiplication, result_division, first_number, second_number = CALL multiplyDivide()
 
-#Print the results resturned by Function
+#Print the results returned by Function
 CONVERT result_multiplication to two decimal places
 OUTPUT "Multiplication of ",first_number," and ",second_number," is ",result_multiplication
 CONVERT result_division to two decimal places
