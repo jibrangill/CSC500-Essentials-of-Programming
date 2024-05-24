@@ -9,7 +9,7 @@ def first_element(n):
 
 def main():
     my_tuple = [(2, 12), (1, 10), (5, 11), (3, 13), (4, 14)]
-    print ('last element: ', last_element(my_tuple))
+    #print ('last element: ', last_element(my_tuple))
     print('Orignal Tuple: ', my_tuple)
     print ('Sorted by last element: ',sorted(my_tuple, key=last_element))
     print ('Sorted by first element: ',sorted(my_tuple, key=first_element))
