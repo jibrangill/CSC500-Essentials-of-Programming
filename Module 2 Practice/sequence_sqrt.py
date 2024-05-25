@@ -24,6 +24,7 @@ def main():
     print_sequence(seq)
     print ('\n\nSequrce square root is:')
     tuple_sqroot = sqroot_sequence(seq)
+    
     print_sequence(tuple_sqroot)
     print ('\n\nSequence times two is:')
     list_seq_times_two = seq_times_two(seq)
