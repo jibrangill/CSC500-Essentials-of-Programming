@@ -16,19 +16,25 @@ def compare_memory_address(obj1, obj2):
         print("The memory address is different for objects i.e ", obj1,' and ', obj2)
 
 def main():
-    x = 4
-    y = 10
-    z = 12
+
+    x = "Hello!"
+    y = "Hello World"
+    z = x + y
+
     print('Value of x is ', x)
+    print('Type of x is ', type(x))
     memory_address1 = check_hex_id(x)
     print('Value of y is ', y)
+    print('Type of y is ', type(y))
     memory_address2 = check_hex_id(y)
     print('Value of z is ', z)
+    print('Type of z is ', type(z))
     memory_address3 = check_hex_id(z)
+
     print('RESULTS:')
     compare_memory_address(memory_address1, memory_address2)
     compare_memory_address(memory_address1,memory_address3)
     compare_memory_address(memory_address2,memory_address3)
-    
+
 if __name__ == "__main__":
     main()
