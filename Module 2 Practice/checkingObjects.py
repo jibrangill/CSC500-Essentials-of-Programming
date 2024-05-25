@@ -5,7 +5,8 @@
 
 def check_hex_id(obj):
     obj_id = hex((id(obj)))
-    print('Address of object created in memory for ',obj, 'is', obj_id)
+    print('Address of object created in memory ', 'is', obj_id)
+    print()
     return obj_id
 
 def compare_memory_address(obj1, obj2):
@@ -18,11 +19,16 @@ def main():
     x = 4
     y = 10
     z = 12
+    print('Value of x is ', x)
     memory_address1 = check_hex_id(x)
+    print('Value of y is ', y)
     memory_address2 = check_hex_id(y)
+    print('Value of z is ', z)
     memory_address3 = check_hex_id(z)
+    print('RESULTS:')
     compare_memory_address(memory_address1, memory_address2)
     compare_memory_address(memory_address1,memory_address3)
     compare_memory_address(memory_address2,memory_address3)
+    
 if __name__ == "__main__":
     main()
