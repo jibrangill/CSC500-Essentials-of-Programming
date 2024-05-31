@@ -10,7 +10,7 @@ class alarmCalculator:
         self.time_entered_by_user = time_provided
         self.hours_to_wait = alarm_wait
 
-    #function to calculate the alarm
+    #function to calculate the when the alarm goes off. Additional calculation to check # of days after which alarm will sound has been included as well.
     def alarm_time_calculator(self):
         current_time = self.time_entered_by_user
         alarm_wait = self.hours_to_wait 
