@@ -6,8 +6,8 @@
 class alarmCalculator:
 
     #initializer function
-    def __init__(self,time_provided,alarm_wait):
-        self.time_entered_by_user = time_provided
+    def __init__(self,user_current_time,alarm_wait):
+        self.time_entered_by_user = user_current_time
         self.hours_to_wait = alarm_wait
 
     #function to calculate the when the alarm goes off. Additional calculation to check # of days after which alarm will sound has been included as well.
@@ -33,6 +33,7 @@ def main():
     alarm_wait_hrs = int(input('Enter number of hours to wait for alarm:'))
     alarm_time_calculated = alarmCalculator(current_time,alarm_wait_hrs)
     alarm_time_calculated.timePrinter()
+    print(vars(alarm_time_calculated))
 
 if __name__ == '__main__':
     main()
