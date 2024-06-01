@@ -33,9 +33,7 @@ def main():
     alarm_wait_hrs = int(input('Enter number of hours to wait for alarm:'))
     alarm_time_calculated = alarmCalculator(current_time,alarm_wait_hrs)
     alarm_time_calculated.timePrinter()
-    print(vars(alarm_time_calculated))
+    #print(vars(alarm_time_calculated))
 
 if __name__ == '__main__':
     main()
-        
-    
