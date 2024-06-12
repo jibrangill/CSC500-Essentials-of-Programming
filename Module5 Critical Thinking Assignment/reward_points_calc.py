@@ -1,5 +1,5 @@
 #Author: Jibran Gill
-#Books Purchase Reward Point Calculator
+#Part2 Books Purchase Reward Point Calculator
 
 #I am using procedural approach for this assignment
 #Function to calculate the reward point
