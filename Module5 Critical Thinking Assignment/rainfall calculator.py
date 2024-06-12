@@ -16,7 +16,7 @@ class Rainfall_Calculator:
     def calculate_rainfall(self):
         rainfall_total = sum(self.monthly_rainfall.values())
         num_months = len(self.monthly_rainfall)
-        average_rainfall = rainfall_total / num_months if num_months else 0
+        average_rainfall = rainfall_total / num_months if num_months else 0 #handling the div by zero case
         return rainfall_total, average_rainfall
     
     #Function to get user input for the years and monthly rainfall. 
