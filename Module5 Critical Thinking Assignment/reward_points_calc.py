@@ -4,26 +4,26 @@
 #I am using procedural approach for this assignment
 #Function to calculate the reward point
 def calculate_reward_points(num_books):
-    points = 0
+    
+    # Calculate points for 8 or more books
+    if num_books >= 8:
+        return 60
+    else:
+        points = 0
+        # Calculate points for sets of 6 books
+        points += (num_books // 6) * 30
+        num_books %= 6
 
-    # Calculate points for sets of 8 books
-    points += (num_books // 8) * 60
-    num_books %= 8
+        # Calculate points for sets of 4 books
+        points += (num_books // 4) * 15
+        num_books %= 4
 
-    # Calculate points for sets of 6 books
-    points += (num_books // 6) * 30
-    num_books %= 6
+        # Calculate points for sets of 2 books
+        points += (num_books // 2) * 5
+        num_books %= 2
 
-    # Calculate points for sets of 4 books
-    points += (num_books // 4) * 15
-    num_books %= 4
-
-    # Calculate points for sets of 2 books
-    points += (num_books // 2) * 5
-    num_books %= 2
-
-    # If there are any remaining books, they don't contribute to points
-    return points
+        # If there are any remaining books, they don't contribute to points
+        return points
 
 #Program main
 def main():
