@@ -14,8 +14,6 @@ else:
 #Creating a not boolean expression
 if not condition2:
     print('Condition2 is false')
-
-if not condition1:
-    print('Conditon1 is false')
-else:
-    print('Condition1 is true')
+    weight_of_pet = 10
+    #if 0 < weight_of_pet <= 20:
+     #   print('TRUE')
