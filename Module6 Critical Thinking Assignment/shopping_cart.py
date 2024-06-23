@@ -58,7 +58,8 @@ class ShoppingCart:
         return total_cost
 
     def print_total(self):
-        print(f"\n{self.customer_name}'s Shopping Cart - {self.current_date}")
+        print("\nOUTPUT SHOPPING CART")
+        print(f"{self.customer_name}'s Shopping Cart - {self.current_date}")
         if len(self.cart_items) == 0:
             print("SHOPPING CART IS EMPTY")
         else:
@@ -69,7 +70,8 @@ class ShoppingCart:
 
     
     def print_descriptions(self):
-        print(f"\n{self.customer_name}'s Shopping Cart - {self.current_date}")
+        print("\nOUTPUT ITEMS' DESCRIPTIONS")   
+        print(f"{self.customer_name}'s Shopping Cart - {self.current_date}")
         print("Item Descriptions")
         if not self.cart_items:
             print("SHOPPING CART IS EMPTY")
