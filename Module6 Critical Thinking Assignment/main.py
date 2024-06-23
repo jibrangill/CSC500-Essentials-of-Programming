@@ -6,6 +6,7 @@ from item_to_purchase import ItemToPurchase
 from datetime import datetime
 import sys
 
+#Funtion to print the menu and request user input
 def print_menu(cart):
     while True:
         print("------------------------------------")
@@ -19,7 +20,7 @@ def print_menu(cart):
         print("| q - Quit                         |")
         print("------------------------------------")
         choice = input("Choose an option: ")
-
+#Branching for handling the user input. Also checking the ValueError
         if choice == 'a':
             item_name = input("Enter the item name: ")
             item_description = input("Enter the item description: ")
@@ -62,10 +63,15 @@ def print_menu(cart):
         elif choice == 'o':
             cart.print_total()
         elif choice == 'q':
-            sys.exit("\nExiting the program. Good Bye!\n") #I used sys.exit() to exit instead of returning the control to main to avoid being prompted for customer name in main(). 
+            #Using sys.exit() to exit instead of returning the control 
+            # to main to avoid being prompted for customer name in main(). 
+            sys.exit("\nExiting the program. Good Bye!\n") 
         else:
             print("Invalid option. Please try again.")
 
+#Funtion to get the date and verify the integrity
+# Checking for inalid format or wrong spellings
+# Checking if date entered is a future date
 def get_valid_date():
     while True:
         date_str = input("Enter today's date, Format (January 1, 2020): ")
@@ -77,7 +83,7 @@ def get_valid_date():
                 return date_str
         except ValueError:
             print("Invalid date format. Make sure the date is in 'Month Day, Year' format and the month is spelled correctly. Please try again.")
-
+#main function
 def main():
     while True:
         customer_name = input("Enter customer's name or 'q' to quit: ")
