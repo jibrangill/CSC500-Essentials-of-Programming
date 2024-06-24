@@ -40,19 +40,18 @@ class ShoppingCart:
     def modify_item(self, item_to_modify):
         found = False
         for item in self.cart_items:
-            if item.item_name != item_to_modify.item_name:
-                print("Item not found in cart. Nothing modified.")
+            if item.item_name == item_to_modify.item_name:
+                if item_to_modify.item_description != "none":
+                    item.item_description = item_to_modify.item_description
+                if item_to_modify.item_price != 0:
+                    item.item_price = item_to_modify.item_price
+                if item_to_modify.item_quantity != 0:
+                    item.item_quantity = item_to_modify.item_quantity
+                found = True
+                print(f'{item_to_modify.item_name} modified successfully')
                 break
-
-            else:
-                for item in self.cart_items:
-                    if item.item_name == item_to_modify.item_name:
-                        if item_to_modify.item_description != "none":
-                            item.item_description = item_to_modify.item_description
-                        if item_to_modify.item_price != 0:
-                            item.item_price = item_to_modify.item_price
-                        if item_to_modify.item_quantity != 0:
-                            item.item_quantity = item_to_modify.item_quantity
+        if not found:
+            print("Item not found in cart. Nothing modified.")
 
     #Funtion to get the number of items in the cart
     def get_num_items_in_cart(self):
