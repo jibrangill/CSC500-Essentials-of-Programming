@@ -1,5 +1,5 @@
 #Author: Jibran Gill
-#Main section of the proram
+#Main section of the program
 
 from shopping_cart import ShoppingCart
 from item_to_purchase import ItemToPurchase
