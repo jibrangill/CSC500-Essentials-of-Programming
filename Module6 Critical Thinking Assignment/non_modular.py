@@ -25,7 +25,7 @@ class ItemToPurchase:
                 f"Quantity: {self.item_quantity}")
 
 #Class Shopping _Cart
-from item_to_purchase import ItemToPurchase
+#from item_to_purchase import ItemToPurchase
 
 class ShoppingCart:
 
