@@ -46,10 +46,10 @@ class ShoppingCart:
             if item.item_name == item_name:
                 self.cart_items.remove(item)
                 found = True
-                print(f'{item_name} found and removed successfully\n')
+                print(f'{item_name} found and removed successfully.\n')
                 break
         if not found:
-            print(f'{item_name} not found in cart. Nothing removed\n.')
+            print(f'{item_name} not found in cart. Nothing removed.\n')
 
     # Function to modify the item in the cart
     def modify_item(self, item_to_modify):
@@ -63,10 +63,10 @@ class ShoppingCart:
                 if item_to_modify.item_quantity != 0:
                     item.item_quantity = item_to_modify.item_quantity
                 found = True
-                print(f'{item_to_modify.item_name} modified successfully\n')
+                print(f'{item_to_modify.item_name} modified successfully.\n')
                 break
         if not found:
-            print("Item not found in cart. Nothing modified\n")
+            print("Item not found in cart. Nothing modified.\n")
 
     # Function to get the number of items in the cart
     def get_num_items_in_cart(self):
@@ -146,10 +146,10 @@ def print_menu(cart):
             # Check if item exists before asking for other inputs
             item_exists = any(item.item_name == item_name for item in cart.cart_items)
             if not item_exists:
-                print(f"Item '{item_name}' not found in cart. Nothing modified.")
+                print(f"Item '{item_name}' not found in cart. Nothing modified.\n")
                 continue
             else:
-                print("Item found in cart.")
+                print("Item found in cart.\n")
             item_description = input("Enter the new description (or 'none' to leave unchanged): ")
             while True:
                 try:
