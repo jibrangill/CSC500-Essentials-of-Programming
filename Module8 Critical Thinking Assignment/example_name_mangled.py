@@ -55,6 +55,8 @@ class ItemToPurchase:
 
 # Example usage
 item = ItemToPurchase("Apple", "Fresh Red Apple", 0.5, 10)
-item.print_item_cost()
-item.print_item_description()
-print(item)
+#item.print_item_cost()
+#item.print_item_description()
+#print(item)
+print(item._ItemToPurchase__item_description)
+print(item._ItemToPurchase__item_name)
